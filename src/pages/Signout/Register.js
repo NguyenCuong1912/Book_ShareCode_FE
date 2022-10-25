@@ -5,7 +5,8 @@ import './../../assets/css/User.css'
 
 export default function Register() {
 
-    // const dispatch = useDispatch();
+    const dispatch = useDispatch();
+
     const formik = useFormik({
         initialValues: {
             email: '',
