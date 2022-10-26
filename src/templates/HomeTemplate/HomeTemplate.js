@@ -1,5 +1,8 @@
 import { Route } from 'react-router';
-import { useEffect } from 'react';
+import { useEffect, Fragment } from 'react';
+import Header from './Header/Header';
+import Footer from './Footer/Footer';
+
 
 
 export const HomeTemplate = (props) => {
@@ -9,15 +12,15 @@ export const HomeTemplate = (props) => {
     })
     return <Route {...restRoute} render={(propsRoute) => {
 
-        return <>
+        return <Fragment>
 
-
+            <Header />
 
             <Component {...propsRoute} />
 
 
+            <Footer />
 
-
-        </>
+        </Fragment>
     }} />
 }

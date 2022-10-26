@@ -110,14 +110,23 @@
   margin-left: -50px
   
 }
-
+.background-content-user-login{
+  width: 400px;
+  height: 200px;
+  background: radial-gradient(circle at center, #23A6D5 , #880cee);
+  margin-top: -50px;
+  margin-left: -50px
+}
 .background-btn{
   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
 }
+.background-btn-login{
+  background: radial-gradient(circle at center, #23A6D5 , #880cee);
+}
 .text-gradient{
   text-transform: uppercase;
-  background: linear-gradient(to right, #E73C7E 0%, #330867 100%);
+  background: linear-gradient(to right, #f50675 0%, #330867 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
 }
+
