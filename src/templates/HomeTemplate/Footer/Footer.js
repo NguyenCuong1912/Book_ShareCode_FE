@@ -10,26 +10,26 @@ import {
 
 export default function Footer() {
     return (
-        <footer className="text-gray-600 body-font">
+        <footer className="text-gray-600 body-font border-t-2">
             <div className="container px-5 py-24 mx-auto">
                 <div className="flex flex-wrap md:text-left text-center order-first">
                     <div className="lg:w-1/4 md:w-1/2 w-full px-4">
                         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">DỊCH VỤ</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Điều khoản sử dụng</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Điều khoản sử dụng</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Chính sách bảo mật</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Chính sách bảo mật</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Liên hệ</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Liên hệ</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Hệ thống nhà sách</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Hệ thống nhà sách</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Tra cứu đơn hàng</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Tra cứu đơn hàng</NavLink>
                             </li>
                         </nav>
                     </div>
@@ -37,22 +37,22 @@ export default function Footer() {
                         <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">HỖ TRỢ</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Hướng dẫn đặt hàng</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Hướng dẫn đặt hàng</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Chính sách đổi trả - hoàn tiền</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Chính sách đổi trả - hoàn tiền</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Phương thức vận chuyển</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Phương thức vận chuyển</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Phương thức thanh toán</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Phương thức thanh toán</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Chính sách khách hàng mua sỉ</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Chính sách khách hàng mua sỉ</NavLink>
                             </li>
                             <li>
-                                <NavLink to='' className="text-gray-600 hover:text-gray-800">Chính sách khách hàng cho trường học</NavLink>
+                                <NavLink to='' className="text-gray-600 hover:text-red-500">Chính sách khách hàng cho trường học</NavLink>
                             </li>
                         </nav>
                     </div>
@@ -91,7 +91,7 @@ export default function Footer() {
             <div className="bg-gray-100">
                 <div className="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col">
                     <NavLink to='' className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
-                        <img src='https://theme.hstatic.net/200000343865/1000938429/14/logo.png?v=48' alt='KIM DONG' />
+                        <img src='img/logo.png' alt='KIM DONG' />
 
                     </NavLink>
 

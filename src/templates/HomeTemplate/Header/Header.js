@@ -12,8 +12,11 @@ import {
     AiOutlineForm,
     AiOutlineHeart,
     AiFillShopping,
-    AiOutlineMenu
 } from 'react-icons/ai';
+import NavbarNew from '../../../components/Header/NavbarNew';
+import NavbarInfo from '../../../components/Header/NavbarInfo';
+import NavbarMenu from '../../../components/Header/NavbarMenu';
+import { NavLink } from 'react-router-dom';
 
 const { Search } = Input;
 const onSearch = (value) => console.log(value);
@@ -56,26 +59,28 @@ export default function Header() {
                                 <Search placeholder="Bạn muốn tìm gì?..." onSearch={onSearch} />
                             </div>
                             <div className='py-4 px-36'>
-                                <img src='https://theme.hstatic.net/200000343865/1000938429/14/logo.png?v=48' alt='' />
+                                <img src='img/logo.png' alt='' />
                             </div>
                             <div className='py-12 grid grid-cols-3'>
-                                <div className='flex py-2'>
+                                <NavLink to='' className='flex py-2 text-black hover:text-red-500'>
                                     <AiOutlineLogin className='text-lg my-1 mx-2' />
                                     <span>Đăng nhập</span>
-                                </div>
-                                <div className='flex py-2'>
+                                </NavLink>
+                                <NavLink to='' className='flex py-2 text-black hover:text-red-500'>
                                     <AiOutlineForm className='text-lg my-1 mx-2' />
                                     <span>Đăng ký</span>
-                                </div>
+                                </NavLink>
                                 <div className='flex pt-1'>
                                     <div className='mx-2 flex'>
-                                        <AiOutlineHeart className='text-2xl my-1' />
+                                        <AiOutlineHeart className='text-2xl my-1 hover:text-red-500 cursor-pointer' />
                                         <div className='h-5 w-5 rounded-full bg-red-500 text-white'>
                                             <span className='ml-1'>2</span>
                                         </div>
                                     </div>
                                     <div className='mx-2 flex'>
-                                        <AiFillShopping className='text-2xl my-1' />
+                                        <NavLink to=''>
+                                            <AiFillShopping className='text-2xl my-1 text-black hover:text-red-500' />
+                                        </NavLink>
                                         <div className='h-5 w-5 rounded-full bg-red-500 text-white'>
                                             <span className='ml-1'>2</span>
                                         </div>
@@ -92,9 +97,17 @@ export default function Header() {
                     <div className='col-start-2 col-span-4 mx-20 h-8' style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
                         <div className='grid grid-cols-5'>
                             <div className='flex text-white font-bold bg-red-500 h-8 py-1'>
-                                <AiOutlineMenu className='text-2xl mx-2' />
-                                <span>DANH MỤC SẢN PHẨM</span>
+                                <NavbarMenu />
                             </div>
+                            <div className='col-span-4 flex'>
+                                <div className='text-base ml-4 mt-1'>
+                                    <NavbarNew />
+                                </div>
+                                <div className='text-base ml-4 mt-1'>
+                                    <NavbarInfo />
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
