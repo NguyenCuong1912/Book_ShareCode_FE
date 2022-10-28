@@ -2,7 +2,7 @@ import React, { Fragment, useRef } from 'react'
 import Slider from "react-slick";
 import { AiFillLeftCircle, AiFillRightCircle } from "react-icons/ai";
 import { NavLink } from 'react-router-dom';
-export default function Content2() {
+export default function Content4() {
     const ref = useRef({});
 
     const next = () => {
@@ -16,12 +16,12 @@ export default function Content2() {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
     };
     return (
         <Fragment>
-            <div className='col-start-2 col-span-4 my-14 text-center'>
-                <div className='text-2xl font-bold'>SÁCH MỚI</div>
+            <div className='col-start-2 col-span-4 my-8 text-center'>
+                {/* <div className='text-2xl font-bold'>BỘ ẤN PHẨM KỈ NIỆM 65 NĂM THÀNH LẬP NHÀ XUẤT BẢN KIM ĐỒNG</div> */}
                 <div className='grid grid-cols-12 my-8'>
                     <div className='grid content-center ml-12'>
                         <button className="button h-8 w-8" onClick={previous}>

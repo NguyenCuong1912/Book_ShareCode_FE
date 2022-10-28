@@ -51,7 +51,7 @@ export default function Header() {
                 </div>
             </div>
 
-            <div className='h-32'>
+            <div className='h-32 border-b-2'>
                 <div className='grid grid-cols-6'>
                     <div className='col-start-2 col-span-4'>
                         <div className='grid grid-cols-3 mx-20'>
@@ -93,10 +93,10 @@ export default function Header() {
             </div>
 
             <div className='h-8 w-full absolute z-10'>
-                <div className='grid grid-cols-6'>
-                    <div className='col-start-2 col-span-4 mx-20 h-8' style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
-                        <div className='grid grid-cols-5'>
-                            <div className='flex text-white font-bold bg-red-500 h-8 py-1'>
+                <div className='grid grid-cols-5'>
+                    <div className='col-start-2 col-span-3 h-8' style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
+                        <div className='flex'>
+                            <div className='flex text-white font-bold bg-red-500 h-8 py-1 w-1/4'>
                                 <NavbarMenu />
                             </div>
                             <div className='col-span-4 flex'>

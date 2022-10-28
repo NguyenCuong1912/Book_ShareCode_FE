@@ -16,7 +16,7 @@ export default function Content1() {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
-        arrows: false
+        arrows: false,
     };
     return (
         <Fragment>
@@ -24,7 +24,7 @@ export default function Content1() {
                 <div className='text-2xl font-bold'>BỘ ẤN PHẨM KỈ NIỆM 65 NĂM THÀNH LẬP NHÀ XUẤT BẢN KIM ĐỒNG</div>
                 <div className='grid grid-cols-12 my-8'>
                     <div className='grid content-center ml-12'>
-                        <button className="button" onClick={previous}>
+                        <button className="button h-8 w-8" onClick={previous}>
                             <AiFillLeftCircle className='text-3xl text-red-500 hover:text-red-700' />
                         </button>
                     </div>
@@ -110,7 +110,7 @@ export default function Content1() {
                         </Slider>
                     </div>
                     <div className='grid content-center ml-8'>
-                        <button className="button" onClick={next}>
+                        <button className="button h-8 w-8" onClick={next}>
                             <AiFillRightCircle className='text-3xl text-red-500 hover:text-red-700' />
                         </button>
                     </div>

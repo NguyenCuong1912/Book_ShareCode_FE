@@ -8,12 +8,18 @@ import QuanLyUsers from './pages/Admin/Users/QuanLyUsers';
 import { UserTemplate } from './templates/UserTemplate/UserTemplate';
 import { HomeTemplate } from './templates/HomeTemplate/HomeTemplate';
 import AdminTemplate from './templates/AdminTemplate/AdminTemplate';
+import Detail from './pages/UI/Detail/Detail';
+import Cart from './pages/UI/Cart/Cart';
 export const history = createBrowserHistory();
 export default function App() {
   return (
     <Router history={history}>
       <Switch>
         <HomeTemplate path="/" exact Component={Home} />
+        <HomeTemplate path="/detail" exact Component={Detail} />
+        <HomeTemplate path="/cart" exact Component={Cart} />
+
+
         <UserTemplate path="/admin/register" exact Component={Register} />
         <UserTemplate path="/login" exact Component={Login} />
 
