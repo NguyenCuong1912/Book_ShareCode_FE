@@ -41,7 +41,7 @@ export default function CreateBook(props) {
         }
     })
 
-    const arrOpt = lstCate.map
+    // const arrOpt = lstCate.map
     return (
         <Fragment>
             <div>
@@ -62,9 +62,13 @@ export default function CreateBook(props) {
                                     }
                                     size='large'
                                     style={{ width: '50%', boxShadow: 'rgb(0 0 0 / 10%) 0px 10px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px' }}
-                                    options={lstCate.map((item, index) => {
-                                        return <p>{item.name}</p>
-                                    })}
+                                // options={lstCate.map((item, index) => {
+                                //     let opject = {};
+                                //     return (
+                                //         opject.label = `${item.name}`,
+                                //         opject.value = item.id
+                                //     )
+                                // })}
                                 />
 
                             </div>
