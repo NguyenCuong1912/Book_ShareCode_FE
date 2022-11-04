@@ -1,6 +1,6 @@
-import { bassService } from "./baseService";
+import { baseService } from "./baseService";
 
-export class QuanLyUserService extends bassService {
+export class QuanLyUserService extends baseService {
 
     // eslint-disable-next-line no-useless-constructor
     constructor() {

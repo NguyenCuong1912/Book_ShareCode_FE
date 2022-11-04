@@ -96,7 +96,7 @@ export default function Header() {
                 <div className='grid grid-cols-5'>
                     <div className='col-start-2 col-span-3 h-8' style={{ background: 'rgba(255, 255, 255, 0.4)' }}>
                         <div className='flex'>
-                            <div className='flex text-white font-bold bg-red-500 h-8 py-1 w-1/4'>
+                            <div className='flex text-white font-bold bg-red-600 h-8 py-1 w-1/4'>
                                 <NavbarMenu />
                             </div>
                             <div className='col-span-4 flex'>

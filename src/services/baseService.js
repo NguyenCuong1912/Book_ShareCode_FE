@@ -2,7 +2,7 @@ import Axios from 'axios';
 import { DOMAIN } from './../utils/Settings/config'
 
 
-export class bassService {
+export class baseService {
 
     post = (url, model) => {
         return Axios({

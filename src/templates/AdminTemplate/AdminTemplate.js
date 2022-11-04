@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from 'react'
 import {
-    FileOutlined,
     UserOutlined,
 } from '@ant-design/icons';
+import { FcFilingCabinet } from "react-icons/fc";
+import { IoBookSharp } from "react-icons/io5";
 import { Layout, Menu, message } from 'antd';
 import { Route } from 'react-router';
 import { Redirect, NavLink } from 'react-router-dom';
@@ -44,13 +45,15 @@ export default function AdminTemplate(props) {
                         <span className='text-red-500 flex items-center font-bold text-lg mx-4'>KIM ĐỒNG</span>
                     </div>
                     <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" style={{ backgroundColor: 'transparent' }}>
-                        <Menu.Item key='1' icon={<UserOutlined />}>
+                        <Menu.Item key='1' icon={<UserOutlined style={{ fontSize: 20, color: 'gray' }} />}>
                             <NavLink to='/admin/account' >Users</NavLink>
                         </Menu.Item>
-                        <Menu.Item key='2' icon={<FileOutlined />}>
-                            <NavLink to='/admin/account'>Films</NavLink>
+                        <Menu.Item key='2' icon={<FcFilingCabinet style={{ fontSize: 20 }} />}>
+                            <NavLink to='/admin/category'>Categories</NavLink>
                         </Menu.Item>
-
+                        <Menu.Item key='3' icon={<IoBookSharp style={{ fontSize: 20, color: 'gray' }} />}>
+                            <NavLink to='/admin/product'>Books</NavLink>
+                        </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout className="site-layout">
