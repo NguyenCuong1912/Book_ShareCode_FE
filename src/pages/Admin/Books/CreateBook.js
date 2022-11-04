@@ -11,21 +11,21 @@ export default function CreateBook(props) {
     const dispatch = useDispatch();
 
     const { lstCate } = useSelector(state => state.QuanLyCategoryReducer);
-    console.log({ lstCate })
+    console.log(lstCate)
 
     useEffect(() => {
         dispatch(GetAllCategoryAction());
     }, [])
+    const arrOption = []
+    lstCate.forEach(element => {
+        const newOpt = {
+            value: element.id,
+            label: element.name,
+        }
+        arrOption.push(newOpt)
 
-    // const renderCate = () => {
-    //     lstCate.map((item, index) => {
-    //         const options = {
-    //             value: item.id,
-    //             label:item.name,
-    //         }
+    });
 
-    //     })
-    // }
 
     const onChange = (value) => {
         console.log(`selected ${value}`);
@@ -41,7 +41,7 @@ export default function CreateBook(props) {
         }
     })
 
-    const arrOpt = lstCate.map
+    // const arrOpt = lstCate.map
     return (
         <Fragment>
             <div>
@@ -55,16 +55,14 @@ export default function CreateBook(props) {
                                     showSearch
                                     placeholder="Chọn loại sách..."
                                     optionFilterProp="children"
-                                    onChange={onChange}
-                                    onSearch={onSearch}
-                                    filterOption={(input, option) =>
+                                    onChange={ onChange }
+                                    onSearch={ onSearch }
+                                    filterOption={ (input, option) =>
                                         (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
                                     }
                                     size='large'
-                                    style={{ width: '50%', boxShadow: 'rgb(0 0 0 / 10%) 0px 10px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px' }}
-                                    options={lstCate.map((item, index) => {
-                                        return <p>{item.name}</p>
-                                    })}
+                                    style={ { width: '50%', boxShadow: 'rgb(0 0 0 / 10%) 0px 10px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px' } }
+                                    options={ arrOption }
                                 />
 
                             </div>
@@ -92,7 +90,7 @@ export default function CreateBook(props) {
                         <div className='col-span-3 ml-4'>
                             <div className='my-4'>
                                 <div>Mô tả:</div>
-                                <TextArea rows={9} style={{ boxShadow: 'rgb(0 0 0 / 10%) 0px 10px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px' }} />
+                                <TextArea rows={ 9 } style={ { boxShadow: 'rgb(0 0 0 / 10%) 0px 10px 25px -5px, rgb(0 0 0 / 4%) 0px 10px 10px -5px' } } />
                             </div>
                         </div>
                     </div>

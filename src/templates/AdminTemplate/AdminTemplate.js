@@ -19,9 +19,9 @@ export default function AdminTemplate(props) {
 
     // const { userLogin } = useSelector(state => state.QuanLyUserReducer);
     // console.log({ userLogin })
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    })
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // })
     // const operations = <Fragment>
     //     {!_.isEmpty(userLogin) ? <div className='flex'>
     //         <NavLink to='/profile' className='flex'>
@@ -36,42 +36,42 @@ export default function AdminTemplate(props) {
     //         }} className="self-center border-l-2 border-green-900 px-8 py-3 text-yellow-500 text-lg font-bold hover:text-green-900">Đăng xuất</button>
     //     </div> : ''}
     // </Fragment>
-    return <Route {...restRoute} render={(propsRoute) => {
+    return <Route { ...restRoute } render={ (propsRoute) => {
         return <Fragment>
-            <Layout style={{ minHeight: '100vh' }}>
-                <Sider collapsible collapsed={collapsed} onCollapse={(value) => setCollapsed(value)} style={{ background: 'linear-gradient(180deg, white, #002140 80%)' }}>
-                    <div className="logo mt-4 flex" style={{ backgroundColor: 'transparent' }}>
+            <Layout style={ { minHeight: '100vh' } }>
+                <Sider collapsible collapsed={ collapsed } onCollapse={ (value) => setCollapsed(value) } style={ { background: 'linear-gradient(180deg, white, #002140 80%)' } }>
+                    <div className="logo mt-4 flex" style={ { backgroundColor: 'transparent' } }>
                         <img src='https://theme.hstatic.net/200000343865/1000938429/14/logo.png?v=48' alt='Kim đồng' className='w-14 h-20 cursor-pointer ml-4' />
                         <span className='text-red-500 flex items-center font-bold text-lg mx-4'>KIM ĐỒNG</span>
                     </div>
-                    <Menu theme="dark" defaultSelectedKeys={['1']} mode="inline" style={{ backgroundColor: 'transparent' }}>
-                        <Menu.Item key='1' icon={<UserOutlined style={{ fontSize: 20, color: 'gray' }} />}>
+                    <Menu theme="dark" defaultSelectedKeys={ ['1'] } mode="inline" style={ { backgroundColor: 'transparent' } }>
+                        <Menu.Item key='1' icon={ <UserOutlined style={ { fontSize: 20, color: 'gray' } } /> }>
                             <NavLink to='/admin/account' >Users</NavLink>
                         </Menu.Item>
-                        <Menu.Item key='2' icon={<FcFilingCabinet style={{ fontSize: 20 }} />}>
+                        <Menu.Item key='2' icon={ <FcFilingCabinet style={ { fontSize: 20 } } /> }>
                             <NavLink to='/admin/category'>Categories</NavLink>
                         </Menu.Item>
-                        <Menu.Item key='3' icon={<IoBookSharp style={{ fontSize: 20, color: 'gray' }} />}>
+                        <Menu.Item key='3' icon={ <IoBookSharp style={ { fontSize: 20, color: 'gray' } } /> }>
                             <NavLink to='/admin/product'>Books</NavLink>
                         </Menu.Item>
                     </Menu>
                 </Sider>
                 <Layout className="site-layout">
-                    <Header className="site-layout-background" style={{ padding: 0, background: 'linear-gradient(45deg, #002140 5%, transparent)' }}>
-                        {/* <div className='flex justify-end my-4'>{operations}</div> */}
+                    <Header className="site-layout-background" style={ { padding: 0, background: 'linear-gradient(45deg, #002140 5%, transparent)' } }>
+                        {/* <div className='flex justify-end my-4'>{operations}</div> */ }
                     </Header>
-                    <Content style={{ margin: '0 16px', }}>
-                        <div className="site-layout-background" style={{ padding: 24, minHeight: 360, }}>
+                    <Content style={ { margin: '0 16px', } }>
+                        <div className="site-layout-background" style={ { padding: 24, minHeight: 360, } }>
 
-                            <Component {...propsRoute} />
+                            <Component { ...propsRoute } />
 
                         </div>
                     </Content>
-                    <Footer style={{ textAlign: 'center', }}>
+                    <Footer style={ { textAlign: 'center', } }>
                         Ant Design ©2018 Created by Ant UED
                     </Footer>
                 </Layout>
             </Layout>
         </Fragment>
-    }} />
+    } } />
 }
