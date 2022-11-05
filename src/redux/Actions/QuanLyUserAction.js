@@ -9,7 +9,7 @@ export const RegisterAction = (dataSignUp) => {
             const result = await quanLyUserService.signUp(dataSignUp);
             if (result.status === 201) {
                 await message.success("Đăng ký tài khoản thành công!")
-                history.push('/')
+                history.push('/login')
             }
             else {
                 message.error("Đăng ký thất bại!")
@@ -22,11 +22,11 @@ export const RegisterAction = (dataSignUp) => {
 }
 
 
+
 export const LoginAction = (dataSignIn) => {
     return async dispatch => {
         try {
             const result = await quanLyUserService.signIn(dataSignIn);
-            console.log({ result })
             if (result.status === 200) {
                 dispatch({
                     type: SET_LOGIN,
@@ -34,7 +34,7 @@ export const LoginAction = (dataSignIn) => {
                 })
                 if (result.data.typeAccount === "ADMIN") {
                     await message.success("Bạn đã đăng nhập tài khoản admin!")
-                    history.push('/')
+                    history.push('/admin/account')
                 }
                 else {
                     await message.success("Đăng nhập thành công!")
@@ -69,8 +69,14 @@ export const DeleteUser = (id) => {
     return async dispatch => {
         try {
             const result = await quanLyUserService.delUser(id);
-            message.success('Xóa thành công!')
-            dispatch(GetListUserAction())
+            if (result.status === 200) {
+                message.success('Xóa thành công!')
+                dispatch(GetListUserAction())
+            }
+            else {
+                message.warning('Xóa thất bại!')
+            }
+
         } catch (error) {
             console.log('error', error.response?.data)
 

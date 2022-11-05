@@ -10,9 +10,9 @@ import {
 } from "reactstrap";
 export const UserTemplate = (props) => {
     const { Component, ...restRoute } = props;
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    })
+    // useEffect(() => {
+    //     window.scrollTo(0, 0);
+    // })
 
     const [squares1to6, setSquares1to6] = React.useState("");
     const [squares7and8, setSquares7and8] = React.useState("");

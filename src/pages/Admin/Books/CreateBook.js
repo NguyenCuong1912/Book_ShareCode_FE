@@ -47,7 +47,6 @@ export default function CreateBook(props) {
             price: '',
             discount: '',
             description: '',
-
         },
         onSubmit: values => {
             console.log('a', values)

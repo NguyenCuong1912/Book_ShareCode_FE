@@ -62,11 +62,11 @@ export default function Header() {
                                 <img src='img/logo.png' alt='' />
                             </div>
                             <div className='py-12 grid grid-cols-3'>
-                                <NavLink to='' className='flex py-2 text-black hover:text-red-500'>
+                                <NavLink to='/login' className='flex py-2 text-black hover:text-red-500'>
                                     <AiOutlineLogin className='text-lg my-1 mx-2' />
                                     <span>Đăng nhập</span>
                                 </NavLink>
-                                <NavLink to='' className='flex py-2 text-black hover:text-red-500'>
+                                <NavLink to='/register' className='flex py-2 text-black hover:text-red-500'>
                                     <AiOutlineForm className='text-lg my-1 mx-2' />
                                     <span>Đăng ký</span>
                                 </NavLink>

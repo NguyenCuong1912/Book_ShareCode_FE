@@ -61,7 +61,7 @@ export default function Login(props) {
                                     </div>
                                 </form>
                                 <div className="mt-12 text-sm font-display font-semibold text-white text-center">
-                                    Bạn chưa có tài khoản ? <NavLink to='/register/admin' className="cursor-pointer text-red-500 hover:text-red-900">Đăng ký</NavLink>
+                                    Bạn chưa có tài khoản ? <NavLink to='register' className="cursor-pointer text-red-500 hover:text-red-900">Đăng ký</NavLink>
                                 </div>
                             </div>
 

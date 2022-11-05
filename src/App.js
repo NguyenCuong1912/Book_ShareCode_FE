@@ -16,6 +16,7 @@ import EditCategory from './pages/Admin/Category/EditCategory';
 import Product from './pages/UI/Product/Product';
 import QuanLyBook from './pages/Admin/Books/QuanLyBook';
 import CreateBook from './pages/Admin/Books/CreateBook';
+import RegisterUser from './pages/Signout/RegisterUser';
 export const history = createBrowserHistory();
 export default function App() {
   return (
@@ -28,6 +29,8 @@ export default function App() {
 
 
         <UserTemplate path="/admin/register" exact Component={Register} />
+        <UserTemplate path="/register" exact Component={RegisterUser} />
+
         <UserTemplate path="/login" exact Component={Login} />
 
 

@@ -4,15 +4,14 @@ import { useFormik } from 'formik'
 import './../../assets/css/User.css'
 import { RegisterAction } from '../../redux/Actions/QuanLyUserAction';
 
-export default function Register() {
-
+export default function RegisterUser() {
     const dispatch = useDispatch();
 
     const formik = useFormik({
         initialValues: {
             username: '',
             password: '',
-            typeAccount: 'ADMIN'
+            typeAccount: 'USER'
         },
 
         onSubmit: values => {
@@ -25,7 +24,7 @@ export default function Register() {
                 <div className="px-5 pt-48 pl-48 mx-auto">
                     <div className="p-4">
                         <div className="h-full w-2/3 border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
-                            <h1 className='text-5xl text-white font-bold pt-20 pl-24 rounded-3xl background-content-user'><span className='text-gradient'>Đăng ký admin</span></h1>
+                            <h1 className='text-6xl text-white font-bold pt-24 pl-24 rounded-3xl background-content-user-login'><span className='text-gradient'>Đăng ký</span></h1>
                             <div className='p-8'>
                                 <form onSubmit={formik.handleSubmit}>
 
@@ -47,8 +46,8 @@ export default function Register() {
                                     </div>
                                     <div className="mt-10 text-center">
                                         <button type='submit' className="text-white text-xl font-bold border-2 p-4 w-1/2 rounded-full tracking-wide
-                          font-semibold font-display focus:outline-none focus:shadow-outline hover:border-red-500 from-purple-500 to-pink-500 hover:text-red-900
-                          shadow-2xl background-btn">
+                      font-semibold font-display focus:outline-none focus:shadow-outline hover:border-red-500 from-purple-500 to-pink-500 hover:text-red-900
+                      shadow-2xl background-btn-login">
                                             Đăng ký
                                         </button>
                                     </div>
@@ -60,8 +59,6 @@ export default function Register() {
                     </div>
                 </div>
             </section>
-
-
         </Fragment>
     )
 }
